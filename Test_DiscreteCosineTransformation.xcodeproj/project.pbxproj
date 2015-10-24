@@ -14,6 +14,11 @@
 		3F5D9AC21BD6AA2A00881354 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D9AC11BD6AA2A00881354 /* Assets.xcassets */; };
 		3F5D9AC51BD6AA2A00881354 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D9AC31BD6AA2A00881354 /* LaunchScreen.storyboard */; };
 		3F5D9AD01BD6AA2A00881354 /* Test_DiscreteCosineTransformationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D9ACF1BD6AA2A00881354 /* Test_DiscreteCosineTransformationTests.m */; };
+		3F5D9ADC1BD6AD7300881354 /* dct.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D9ADA1BD6AD7300881354 /* dct.c */; };
+		3F5D9ADF1BD95A9500881354 /* dct_2d.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D9ADD1BD95A9500881354 /* dct_2d.c */; };
+		3F5D9AE21BD95AC900881354 /* targa.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D9AE01BD95AC900881354 /* targa.c */; };
+		3F5D9AE41BD95D1100881354 /* in.tga in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D9AE31BD95D1100881354 /* in.tga */; };
+		3F5D9AE51BD95D1100881354 /* in.tga in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D9AE31BD95D1100881354 /* in.tga */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,13 @@
 		3F5D9ACB1BD6AA2A00881354 /* Test_DiscreteCosineTransformationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test_DiscreteCosineTransformationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F5D9ACF1BD6AA2A00881354 /* Test_DiscreteCosineTransformationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test_DiscreteCosineTransformationTests.m; sourceTree = "<group>"; };
 		3F5D9AD11BD6AA2A00881354 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F5D9ADA1BD6AD7300881354 /* dct.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dct.c; sourceTree = "<group>"; };
+		3F5D9ADB1BD6AD7300881354 /* dct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dct.h; sourceTree = "<group>"; };
+		3F5D9ADD1BD95A9500881354 /* dct_2d.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dct_2d.c; sourceTree = "<group>"; };
+		3F5D9ADE1BD95A9500881354 /* dct_2d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dct_2d.h; sourceTree = "<group>"; };
+		3F5D9AE01BD95AC900881354 /* targa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = targa.c; sourceTree = "<group>"; };
+		3F5D9AE11BD95AC900881354 /* targa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = targa.h; sourceTree = "<group>"; };
+		3F5D9AE31BD95D1100881354 /* in.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = in.tga; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,9 +99,16 @@
 				3F5D9ABC1BD6AA2A00881354 /* ViewController.m */,
 				3F5D9ABE1BD6AA2A00881354 /* Main.storyboard */,
 				3F5D9AC11BD6AA2A00881354 /* Assets.xcassets */,
+				3F5D9AE31BD95D1100881354 /* in.tga */,
 				3F5D9AC31BD6AA2A00881354 /* LaunchScreen.storyboard */,
 				3F5D9AC61BD6AA2A00881354 /* Info.plist */,
 				3F5D9AB51BD6AA2A00881354 /* Supporting Files */,
+				3F5D9ADA1BD6AD7300881354 /* dct.c */,
+				3F5D9ADB1BD6AD7300881354 /* dct.h */,
+				3F5D9ADD1BD95A9500881354 /* dct_2d.c */,
+				3F5D9ADE1BD95A9500881354 /* dct_2d.h */,
+				3F5D9AE01BD95AC900881354 /* targa.c */,
+				3F5D9AE11BD95AC900881354 /* targa.h */,
 			);
 			path = Test_DiscreteCosineTransformation;
 			sourceTree = "<group>";
@@ -194,6 +213,7 @@
 				3F5D9AC51BD6AA2A00881354 /* LaunchScreen.storyboard in Resources */,
 				3F5D9AC21BD6AA2A00881354 /* Assets.xcassets in Resources */,
 				3F5D9AC01BD6AA2A00881354 /* Main.storyboard in Resources */,
+				3F5D9AE41BD95D1100881354 /* in.tga in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F5D9AE51BD95D1100881354 /* in.tga in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F5D9ADF1BD95A9500881354 /* dct_2d.c in Sources */,
 				3F5D9ABD1BD6AA2A00881354 /* ViewController.m in Sources */,
+				3F5D9ADC1BD6AD7300881354 /* dct.c in Sources */,
+				3F5D9AE21BD95AC900881354 /* targa.c in Sources */,
 				3F5D9ABA1BD6AA2A00881354 /* AppDelegate.m in Sources */,
 				3F5D9AB71BD6AA2A00881354 /* main.m in Sources */,
 			);
@@ -342,9 +366,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Test_DiscreteCosineTransformation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "dendeng.Test-DiscreteCosineTransformation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = arm64;
 			};
 			name = Debug;
 		};
@@ -353,9 +379,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Test_DiscreteCosineTransformation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "dendeng.Test-DiscreteCosineTransformation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = arm64;
 			};
 			name = Release;
 		};
@@ -402,6 +430,7 @@
 				3F5D9AD61BD6AA2A00881354 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F5D9AD71BD6AA2A00881354 /* Build configuration list for PBXNativeTarget "Test_DiscreteCosineTransformationTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +439,7 @@
 				3F5D9AD91BD6AA2A00881354 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
