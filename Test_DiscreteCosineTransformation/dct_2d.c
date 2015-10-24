@@ -272,7 +272,14 @@ void idct_don(tga_image *tga, double data[8][8], const int xpos, const int ypos)
             double z = 0.0;
             
             double _2xPlus1_x_PI_DIV_16 = (2. * x + 1) * PI_DIV_16;
-            double cos_2xPlus1_x_PI_DIV_16 = cos(_2xPlus1_x_PI_DIV_16);
+            double cos_2xPlus1_x_PI_DIV_16_x1 = cos(_2xPlus1_x_PI_DIV_16);
+            double cos_2xPlus1_x_PI_DIV_16_x2 = cos(_2xPlus1_x_PI_DIV_16 * 2.);
+            double cos_2xPlus1_x_PI_DIV_16_x3 = cos(_2xPlus1_x_PI_DIV_16 * 3.);
+            double cos_2xPlus1_x_PI_DIV_16_x4 = cos(_2xPlus1_x_PI_DIV_16 * 4.);
+            double cos_2xPlus1_x_PI_DIV_16_x5 = cos(_2xPlus1_x_PI_DIV_16 * 5.);
+            double cos_2xPlus1_x_PI_DIV_16_x6 = cos(_2xPlus1_x_PI_DIV_16 * 6.);
+            double cos_2xPlus1_x_PI_DIV_16_x7 = cos(_2xPlus1_x_PI_DIV_16 * 7.);
+
             for (v=0; v<8; v++)
                 //for (u=0; u<8; u++)
                 {
@@ -290,6 +297,7 @@ void idct_don(tga_image *tga, double data[8][8], const int xpos, const int ypos)
                     //COEFFS(Cu,Cv,u,v);
                     //Cu = 0.70710678118655;
                     if (v == 0) Cv = 0.70710678118655; else Cv = 1.0;
+                    double Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v = Cv * cos_2yPlus1_x_PI_DIV_16_x_v;
                     //Cv = 0.70710678118655;
                     S = data_v[0];
                     
@@ -300,76 +308,71 @@ void idct_don(tga_image *tga, double data[8][8], const int xpos, const int ypos)
                     
                     z += q;
                     
+                    
                     //Cu = Cv = 1.0;
                     //u = 1;
                     //COEFFS(Cu, Cv, 1, v);
                     //Cu = 1.0;
                     //double Cu_x_Cv = /*1 **/ Cv;
                     S = data_v[1];
-                    q = Cv * S *
-                        cos_2xPlus1_x_PI_DIV_16
+                    q = S *
+                        cos_2xPlus1_x_PI_DIV_16_x1
                         *
-                        cos_2yPlus1_x_PI_DIV_16_x_v;
+                        Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v;
                     z += q;
                     
                     //u = 2;
                     //COEFFS(Cu, Cv, u, v);
                     S = data_v[2];
-                    q = Cv * S *
-                    cos(
-                        _2xPlus1_x_PI_DIV_16 * 2.)
+                    q = S *
+                    cos_2xPlus1_x_PI_DIV_16_x2
                     *
-                    cos_2yPlus1_x_PI_DIV_16_x_v;
+                    Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v;
                     z += q;
 
                     //u = 3;
                     //COEFFS(Cu, Cv, u, v);
                     S = data_v[3];
-                    q = Cv * S *
-                    cos(
-                        _2xPlus1_x_PI_DIV_16 * 3.)
+                    q = S *
+                    cos_2xPlus1_x_PI_DIV_16_x3
                     *
-                    cos_2yPlus1_x_PI_DIV_16_x_v;
+                    Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v;
                     z += q;
 
                     //u = 4;
                     //COEFFS(Cu, Cv, u, v);
                     S = data_v[4];
-                    q = Cv * S *
-                    cos(
-                        _2xPlus1_x_PI_DIV_16 * 4.)
+                    q = S *
+                    cos_2xPlus1_x_PI_DIV_16_x4
                     *
-                    cos_2yPlus1_x_PI_DIV_16_x_v;
+                    Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v;
                     z += q;
 
                     //u = 5;
                     //COEFFS(Cu, Cv, u, v);
                     S = data_v[5];
-                    q = Cv * S *
-                    cos(
-                        _2xPlus1_x_PI_DIV_16 * 5.)
+                    q = S *
+                    cos_2xPlus1_x_PI_DIV_16_x5
                     *
-                    cos_2yPlus1_x_PI_DIV_16_x_v;
+                    Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v;
                     z += q;
 
                     //u = 6;
                     //COEFFS(Cu, Cv, u, v);
                     S = data_v[6];
-                    q = Cv * S *
-                    cos(
-                        _2xPlus1_x_PI_DIV_16 * 6.)
+                    q = S *
+                    cos_2xPlus1_x_PI_DIV_16_x6
                     *
-                    cos_2yPlus1_x_PI_DIV_16_x_v;
+                    Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v;
                     z += q;
 
                     //u = 7;
                     //COEFFS(Cu, Cv, u, v);
                     S = data_v[7];
-                    q = Cv * S *
-                    cos(
-                        _2xPlus1_x_PI_DIV_16 * 7.)
+                    q = S *
+                    cos_2xPlus1_x_PI_DIV_16_x7
                     *
-                    cos_2yPlus1_x_PI_DIV_16_x_v;
+                    Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v;
                     z += q;
 
                 }
