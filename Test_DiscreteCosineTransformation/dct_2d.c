@@ -266,6 +266,7 @@ void idct_don(tga_image *tga, double data[8][8], const int xpos, const int ypos)
     for (y=0; y<8; y++)
     {
         double _2yPlus1_x_PI_DIV_16 = (2. * y + 1) * PI_DIV_16;
+        //double _2yPlus1_x_PI_DIV_16 = ((y << 2) + 1) * PI_DIV_16;
     
         for (x=0; x<8; x++)
         {
@@ -314,8 +315,8 @@ void idct_don(tga_image *tga, double data[8][8], const int xpos, const int ypos)
                     //COEFFS(Cu, Cv, 1, v);
                     //Cu = 1.0;
                     //double Cu_x_Cv = /*1 **/ Cv;
-                    S = data_v[1];
-                    q = S *
+                    //S = data_v[1];
+                    q = data_v[1] *
                         cos_2xPlus1_x_PI_DIV_16_x1
                         *
                         Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v;
@@ -323,8 +324,8 @@ void idct_don(tga_image *tga, double data[8][8], const int xpos, const int ypos)
                     
                     //u = 2;
                     //COEFFS(Cu, Cv, u, v);
-                    S = data_v[2];
-                    q = S *
+                    //S = data_v[2];
+                    q = data_v[2] *
                     cos_2xPlus1_x_PI_DIV_16_x2
                     *
                     Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v;
@@ -332,8 +333,8 @@ void idct_don(tga_image *tga, double data[8][8], const int xpos, const int ypos)
 
                     //u = 3;
                     //COEFFS(Cu, Cv, u, v);
-                    S = data_v[3];
-                    q = S *
+                    //S = data_v[3];
+                    q = data_v[3] *
                     cos_2xPlus1_x_PI_DIV_16_x3
                     *
                     Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v;
@@ -341,8 +342,8 @@ void idct_don(tga_image *tga, double data[8][8], const int xpos, const int ypos)
 
                     //u = 4;
                     //COEFFS(Cu, Cv, u, v);
-                    S = data_v[4];
-                    q = S *
+                    //S = data_v[4];
+                    q = data_v[4] *
                     cos_2xPlus1_x_PI_DIV_16_x4
                     *
                     Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v;
@@ -350,8 +351,8 @@ void idct_don(tga_image *tga, double data[8][8], const int xpos, const int ypos)
 
                     //u = 5;
                     //COEFFS(Cu, Cv, u, v);
-                    S = data_v[5];
-                    q = S *
+                    //S = data_v[5];
+                    q = data_v[5] *
                     cos_2xPlus1_x_PI_DIV_16_x5
                     *
                     Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v;
@@ -359,8 +360,8 @@ void idct_don(tga_image *tga, double data[8][8], const int xpos, const int ypos)
 
                     //u = 6;
                     //COEFFS(Cu, Cv, u, v);
-                    S = data_v[6];
-                    q = S *
+                    //S = data_v[6];
+                    q = data_v[6] *
                     cos_2xPlus1_x_PI_DIV_16_x6
                     *
                     Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v;
@@ -368,8 +369,8 @@ void idct_don(tga_image *tga, double data[8][8], const int xpos, const int ypos)
 
                     //u = 7;
                     //COEFFS(Cu, Cv, u, v);
-                    S = data_v[7];
-                    q = S *
+                    //S = data_v[7];
+                    q = data_v[7] *
                     cos_2xPlus1_x_PI_DIV_16_x7
                     *
                     Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v;
