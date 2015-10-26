@@ -249,37 +249,181 @@ void idct(tga_image *tga, double data[8][8], const int xpos, const int ypos)
 }
 
 #define PI_DIV_16 0.19634954084936207740391521145497
-#define _2x1_Plus1_x_PI_DIV_16_x0  1.19634954084936207740391521145497
-#define cos_2x1_Plus1_x_PI_DIV_16_x0   0.36575770316999429021426672670326
 
-#define _2x1_Plus1_x_PI_DIV_16_x1  0.58904862254809
-#define cos_2x1_Plus1_x_PI_DIV_16_x1   0.8314696123025452370787883776179
+#define _2x0_Plus1_x_PI_DIV_16_u0  0.0
+#define _2x0_Plus1_x_PI_DIV_16_u1  0.19634954084936207740391521145497
+#define _2x0_Plus1_x_PI_DIV_16_u2  0.39269908169872415480783042290994
+#define _2x0_Plus1_x_PI_DIV_16_u3  0.58904862254809
+#define _2x0_Plus1_x_PI_DIV_16_u4  0.78539816339745
+#define _2x0_Plus1_x_PI_DIV_16_u5  0.98174770424681
+#define _2x0_Plus1_x_PI_DIV_16_u6  1.17809724509617
+#define _2x0_Plus1_x_PI_DIV_16_u7  1.37444678594553
+#define cos_2x0_Plus1_x_PI_DIV_16_u0   1.0
+#define cos_2x0_Plus1_x_PI_DIV_16_u1   0.98078528
+#define cos_2x0_Plus1_x_PI_DIV_16_u2   0.923879533
+#define cos_2x0_Plus1_x_PI_DIV_16_u3   0.831469612
+#define cos_2x0_Plus1_x_PI_DIV_16_u4   0.707106781
+#define cos_2x0_Plus1_x_PI_DIV_16_u5   0.555570233
+#define cos_2x0_Plus1_x_PI_DIV_16_u6   0.382683432
+#define cos_2x0_Plus1_x_PI_DIV_16_u7   0.195090322
 
-#define _2x2_Plus1_x_PI_DIV_16  0.98174770424681
-#define cos_2x2_Plus1_x_PI_DIV_16_x2    -0.998356439317077
+#define _2x1_Plus1_x_PI_DIV_16_u1  0.58904862254809
+#define _2x1_Plus1_x_PI_DIV_16_u2  1.17809724509618
+#define _2x1_Plus1_x_PI_DIV_16_u3  1.76714586764427
+#define _2x1_Plus1_x_PI_DIV_16_u4  2.35619449019236
+#define _2x1_Plus1_x_PI_DIV_16_u5  2.94524311274045
+#define _2x1_Plus1_x_PI_DIV_16_u6  3.53429173528854
+#define _2x1_Plus1_x_PI_DIV_16_u7  4.12334035783663
+#define cos_2x1_Plus1_x_PI_DIV_16_u1   0.831469612
+#define cos_2x1_Plus1_x_PI_DIV_16_u2   0.382683432
+#define cos_2x1_Plus1_x_PI_DIV_16_u3   -0.195090322
+#define cos_2x1_Plus1_x_PI_DIV_16_u4   -0.707106781
+#define cos_2x1_Plus1_x_PI_DIV_16_u5   -0.98078528
+#define cos_2x1_Plus1_x_PI_DIV_16_u6   -0.923879533
+#define cos_2x1_Plus1_x_PI_DIV_16_u7   -0.555570233
+
+
+#define _2x2_Plus1_x_PI_DIV_16_u1  0.98174770424681
+#define _2x2_Plus1_x_PI_DIV_16_u2  1.96349540849362
+#define _2x2_Plus1_x_PI_DIV_16_u3  2.94524311274043
+#define _2x2_Plus1_x_PI_DIV_16_u4  3.92699081698724
+#define _2x2_Plus1_x_PI_DIV_16_u5  4.90873852123405
+#define _2x2_Plus1_x_PI_DIV_16_u6  5.89048622548086
+#define _2x2_Plus1_x_PI_DIV_16_u7  6.87223392972767
+#define cos_2x2_Plus1_x_PI_DIV_16_u1 0.555570233
+#define cos_2x2_Plus1_x_PI_DIV_16_u2 -0.382683432
+#define cos_2x2_Plus1_x_PI_DIV_16_u3 -0.98078528
+#define cos_2x2_Plus1_x_PI_DIV_16_u4 -0.707106781
+#define cos_2x2_Plus1_x_PI_DIV_16_u5 0.195090322
+#define cos_2x2_Plus1_x_PI_DIV_16_u6 0.923879533
+#define cos_2x2_Plus1_x_PI_DIV_16_u7 0.831469612
+
+
+#define _2x3_Plus1_x_PI_DIV_16_u1  1.374446786
+#define _2x3_Plus1_x_PI_DIV_16_u2  2.748893572
+#define _2x3_Plus1_x_PI_DIV_16_u3  4.123340358
+#define _2x3_Plus1_x_PI_DIV_16_u4  5.497787144
+#define _2x3_Plus1_x_PI_DIV_16_u5  6.87223393
+#define _2x3_Plus1_x_PI_DIV_16_u6  8.246680716
+#define _2x3_Plus1_x_PI_DIV_16_u7  9.621127502
+#define cos_2x3_Plus1_x_PI_DIV_16_u1    0.195090322
+#define cos_2x3_Plus1_x_PI_DIV_16_u2    -0.923879533
+#define cos_2x3_Plus1_x_PI_DIV_16_u3    -0.555570233
+#define cos_2x3_Plus1_x_PI_DIV_16_u4    0.707106781
+#define cos_2x3_Plus1_x_PI_DIV_16_u5    0.831469612
+#define cos_2x3_Plus1_x_PI_DIV_16_u6    -0.382683433
+#define cos_2x3_Plus1_x_PI_DIV_16_u7    -0.98078528
+
+
+#define _2x4_Plus1_x_PI_DIV_16_u1  1.76714586764426
+#define _2x4_Plus1_x_PI_DIV_16_u2  3.53429173528852
+#define _2x4_Plus1_x_PI_DIV_16_u3  5.30143760293278
+#define _2x4_Plus1_x_PI_DIV_16_u4  7.06858347057704
+#define _2x4_Plus1_x_PI_DIV_16_u5  8.8357293382213
+#define _2x4_Plus1_x_PI_DIV_16_u6  10.60287520586556
+#define _2x4_Plus1_x_PI_DIV_16_u7  12.37002107350982
+#define cos_2x4_Plus1_x_PI_DIV_16_u1    -0.195090322
+#define cos_2x4_Plus1_x_PI_DIV_16_u2    -0.923879533
+#define cos_2x4_Plus1_x_PI_DIV_16_u3    0.555570233
+#define cos_2x4_Plus1_x_PI_DIV_16_u4    0.707106781
+#define cos_2x4_Plus1_x_PI_DIV_16_u5    -0.831469612
+#define cos_2x4_Plus1_x_PI_DIV_16_u6    -0.382683432
+#define cos_2x4_Plus1_x_PI_DIV_16_u7    0.98078528
+
+
+#define _2x5_Plus1_x_PI_DIV_16_u1  2.15984494934298
+#define _2x5_Plus1_x_PI_DIV_16_u2  4.31968989868596
+#define _2x5_Plus1_x_PI_DIV_16_u3  6.47953484802894
+#define _2x5_Plus1_x_PI_DIV_16_u4  8.63937979737192
+#define _2x5_Plus1_x_PI_DIV_16_u5  10.7992247467149
+#define _2x5_Plus1_x_PI_DIV_16_u6  12.95906969605788
+#define _2x5_Plus1_x_PI_DIV_16_u7  15.11891464540086
+#define cos_2x5_Plus1_x_PI_DIV_16_u1   -0.555570233
+#define cos_2x5_Plus1_x_PI_DIV_16_u2   -0.382683432
+#define cos_2x5_Plus1_x_PI_DIV_16_u3   0.98078528
+#define cos_2x5_Plus1_x_PI_DIV_16_u4   -0.707106781
+#define cos_2x5_Plus1_x_PI_DIV_16_u5   -0.195090322
+#define cos_2x5_Plus1_x_PI_DIV_16_u6   0.923879533
+#define cos_2x5_Plus1_x_PI_DIV_16_u7    -0.831469612
+
+
+#define _2x6_Plus1_x_PI_DIV_16_u1  2.552544031
+#define _2x6_Plus1_x_PI_DIV_16_u2  5.105088062
+#define _2x6_Plus1_x_PI_DIV_16_u3  7.657632093
+#define _2x6_Plus1_x_PI_DIV_16_u4  10.21017612
+#define _2x6_Plus1_x_PI_DIV_16_u5  12.76272016
+#define _2x6_Plus1_x_PI_DIV_16_u6  15.31526419
+#define _2x6_Plus1_x_PI_DIV_16_u7  17.86780822
+#define cos_2x6_Plus1_x_PI_DIV_16_u1    -0.831469612
+#define cos_2x6_Plus1_x_PI_DIV_16_u2    0.382683432
+#define cos_2x6_Plus1_x_PI_DIV_16_u3    0.195090322
+#define cos_2x6_Plus1_x_PI_DIV_16_u4    -0.707106784
+#define cos_2x6_Plus1_x_PI_DIV_16_u5    0.980785279
+#define cos_2x6_Plus1_x_PI_DIV_16_u6    -0.923879534
+#define cos_2x6_Plus1_x_PI_DIV_16_u7    0.555570235
+
+
+#define _2x7_Plus1_x_PI_DIV_16_u1  2.945243113
+#define _2x7_Plus1_x_PI_DIV_16_u2  5.890486225
+#define _2x7_Plus1_x_PI_DIV_16_u3  8.835729338
+#define _2x7_Plus1_x_PI_DIV_16_u4  11.78097245
+#define _2x7_Plus1_x_PI_DIV_16_u5  14.72621556
+#define _2x7_Plus1_x_PI_DIV_16_u6  17.67145868
+#define _2x7_Plus1_x_PI_DIV_16_u7  20.61670179
+#define cos_2x7_Plus1_x_PI_DIV_16_u1    -0.98078528
+#define cos_2x7_Plus1_x_PI_DIV_16_u2    0.923879532
+#define cos_2x7_Plus1_x_PI_DIV_16_u3    -0.831469612
+#define cos_2x7_Plus1_x_PI_DIV_16_u4    0.707106781
+#define cos_2x7_Plus1_x_PI_DIV_16_u5    -0.55557023
+#define cos_2x7_Plus1_x_PI_DIV_16_u6    0.382683436
+#define cos_2x7_Plus1_x_PI_DIV_16_u7   -0.195090323
+
+
 
 void idct_don(tga_image *tga, double data[8][8], const int xpos, const int ypos)
 {
+    double cosData[8][8] = {
+        {1.0, 0.98078528, 0.923879533, 0.831469612, 0.707106781, 0.555570233, 0.382683432,0.195090322},
+        
+        {1.0, 0.831469612,0.382683432,-0.195090322,-0.707106781,-0.98078528,-0.923879533,-0.555570233},
+        
+        {1.0, 0.555570233,-0.382683432,-0.98078528,-0.707106781,0.195090322,0.923879533,0.831469612},
+        
+        {1.0, 0.195090322,-0.923879533,-0.555570233,0.707106781,0.831469612,-0.382683433,-0.98078528},
+        
+        {1.0, -0.195090322,-0.923879533,0.555570233,0.707106781,-0.831469612,-0.382683432,0.98078528},
+        
+        {1.0, -0.555570233,-0.382683432,0.98078528,-0.707106781,-0.195090322,0.923879533,-0.831469612},
+        
+        {1.0, -0.831469612,0.382683432,0.195090322,-0.707106784,0.980785279,-0.923879534,0.555570235},
+        
+        {1.0, -0.98078528,0.923879532,-0.831469612,0.707106781,-0.55557023,0.382683436,-0.195090323}
+    };
+    
     int /*u,*/v,x,y;
     
     /* iDCT */
     for (y=0; y<8; y++)
     {
         double _2yPlus1_x_PI_DIV_16 = (2. * y + 1) * PI_DIV_16;
+        //why using left shift gives us blurry pic?
         //double _2yPlus1_x_PI_DIV_16 = ((y << 2) + 1) * PI_DIV_16;
-    
+        double *cosDataY = cosData[y];
+        
         for (x=0; x<8; x++)
         {
             double z = 0.0;
             
-            double _2xPlus1_x_PI_DIV_16 = (2. * x + 1) * PI_DIV_16;
-            double cos_2xPlus1_x_PI_DIV_16_x1 = cos(_2xPlus1_x_PI_DIV_16);
-            double cos_2xPlus1_x_PI_DIV_16_x2 = cos(_2xPlus1_x_PI_DIV_16 * 2.);
-            double cos_2xPlus1_x_PI_DIV_16_x3 = cos(_2xPlus1_x_PI_DIV_16 * 3.);
-            double cos_2xPlus1_x_PI_DIV_16_x4 = cos(_2xPlus1_x_PI_DIV_16 * 4.);
-            double cos_2xPlus1_x_PI_DIV_16_x5 = cos(_2xPlus1_x_PI_DIV_16 * 5.);
-            double cos_2xPlus1_x_PI_DIV_16_x6 = cos(_2xPlus1_x_PI_DIV_16 * 6.);
-            double cos_2xPlus1_x_PI_DIV_16_x7 = cos(_2xPlus1_x_PI_DIV_16 * 7.);
+//            double _2xPlus1_x_PI_DIV_16 = (2. * x + 1) * PI_DIV_16;
+//            double cos_2xPlus1_x_PI_DIV_16_x1 = cos(_2xPlus1_x_PI_DIV_16);
+//            double cos_2xPlus1_x_PI_DIV_16_x2 = cos(_2xPlus1_x_PI_DIV_16 * 2.);
+//            double cos_2xPlus1_x_PI_DIV_16_x3 = cos(_2xPlus1_x_PI_DIV_16 * 3.);
+//            double cos_2xPlus1_x_PI_DIV_16_x4 = cos(_2xPlus1_x_PI_DIV_16 * 4.);
+//            double cos_2xPlus1_x_PI_DIV_16_x5 = cos(_2xPlus1_x_PI_DIV_16 * 5.);
+//            double cos_2xPlus1_x_PI_DIV_16_x6 = cos(_2xPlus1_x_PI_DIV_16 * 6.);
+//            double cos_2xPlus1_x_PI_DIV_16_x7 = cos(_2xPlus1_x_PI_DIV_16 * 7.);
+            double *cosDataX = cosData[x];
+            
 
             for (v=0; v<8; v++)
                 //for (u=0; u<8; u++)
@@ -291,7 +435,8 @@ void idct_don(tga_image *tga, double data[8][8], const int xpos, const int ypos)
                     double S, q;
                     double /*Cu = 1.0,*/ Cv = 1.0;
                     
-                    double cos_2yPlus1_x_PI_DIV_16_x_v = cos(_2yPlus1_x_PI_DIV_16 * (double)v);
+                    //double cos_2yPlus1_x_PI_DIV_16_x_v = cos(_2yPlus1_x_PI_DIV_16 * (double)v);
+                    double cos_2yPlus1_x_PI_DIV_16_x_v = cosDataY[v];
                     double *data_v = data[v];
                     
 //                    u = 0;
@@ -309,6 +454,9 @@ void idct_don(tga_image *tga, double data[8][8], const int xpos, const int ypos)
                     
                     z += q;
                     
+//                    q = Cu * Cv * S *
+//                    cos((double)(2*x+1) * (double)u * PI/16.0) *
+//                    cos((double)(2*y+1) * (double)v * PI/16.0);
                     
                     //Cu = Cv = 1.0;
                     //u = 1;
@@ -316,65 +464,72 @@ void idct_don(tga_image *tga, double data[8][8], const int xpos, const int ypos)
                     //Cu = 1.0;
                     //double Cu_x_Cv = /*1 **/ Cv;
                     //S = data_v[1];
-                    q = data_v[1] *
-                        cos_2xPlus1_x_PI_DIV_16_x1
+                    z += data_v[1] *
+                        cosDataX[1]
+//                        cos_2xPlus1_x_PI_DIV_16_x1
                         *
                         Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v;
-                    z += q;
+                    //z += q;
                     
                     //u = 2;
                     //COEFFS(Cu, Cv, u, v);
                     //S = data_v[2];
-                    q = data_v[2] *
-                    cos_2xPlus1_x_PI_DIV_16_x2
+                    z += data_v[2] *
+                        cosDataX[2]
+//                    cos_2xPlus1_x_PI_DIV_16_x2
                     *
                     Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v;
-                    z += q;
+                    //z += q;
 
                     //u = 3;
                     //COEFFS(Cu, Cv, u, v);
                     //S = data_v[3];
-                    q = data_v[3] *
-                    cos_2xPlus1_x_PI_DIV_16_x3
+                    z += data_v[3] *
+                        cosDataX[3]
+//                    cos_2xPlus1_x_PI_DIV_16_x3
                     *
                     Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v;
-                    z += q;
+                    //z += q;
 
                     //u = 4;
                     //COEFFS(Cu, Cv, u, v);
                     //S = data_v[4];
-                    q = data_v[4] *
-                    cos_2xPlus1_x_PI_DIV_16_x4
+                    z += data_v[4] *
+                        cosDataX[4]
+//                    cos_2xPlus1_x_PI_DIV_16_x4
                     *
                     Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v;
-                    z += q;
+                    //z += q;
 
                     //u = 5;
                     //COEFFS(Cu, Cv, u, v);
                     //S = data_v[5];
-                    q = data_v[5] *
-                    cos_2xPlus1_x_PI_DIV_16_x5
+                    z += data_v[5] *
+                    cosDataX[5]
+//                    cos_2xPlus1_x_PI_DIV_16_x5
                     *
                     Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v;
-                    z += q;
+                    //z += q;
 
                     //u = 6;
                     //COEFFS(Cu, Cv, u, v);
                     //S = data_v[6];
-                    q = data_v[6] *
-                    cos_2xPlus1_x_PI_DIV_16_x6
+                    z += data_v[6] *
+                    cosDataX[6]
+//                    cos_2xPlus1_x_PI_DIV_16_x6
                     *
                     Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v;
-                    z += q;
+                    //z += q;
 
                     //u = 7;
                     //COEFFS(Cu, Cv, u, v);
                     //S = data_v[7];
-                    q = data_v[7] *
-                    cos_2xPlus1_x_PI_DIV_16_x7
+                    z += data_v[7] *
+                    cosDataX[7]
+//                    cos_2xPlus1_x_PI_DIV_16_x7
                     *
                     Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v;
-                    z += q;
+                    //z += q;
 
                 }
             
@@ -427,6 +582,7 @@ int main_old2(const char* filePath, const char* outFilePath)
         {
             dct(&tga, dct_buf, i*8, j*8);
             quantize(dct_buf);
+//            idct(&tga, dct_buf, i*8, j*8);
             idct_don(&tga, dct_buf, i*8, j*8);
 //            printf("processed %d/%d blocks.\r", ++k,l);
 //            fflush(stdout);
