@@ -92,9 +92,9 @@ void perf_test_targa() {
     char *cpy = calloc([inTgaFilePath length]+1, 1);
     strncpy(cpy, inTgaFilePath_c, [inTgaFilePath length]);
     
-    const size_t iterations = 10;
+    const size_t iterations = 30;
     uint64_t average_runtime = dispatch_benchmark(iterations, ^{
-        main_old2(cpy, outTgaFilePath_c_copy);
+        main_old2(cpy, outTgaFilePath_c_copy);        
     });
     NSLog(@"perf test targa dct=>quantize=>idct: %llu milliseconds", average_runtime/1000000);
 //    main_old2(cpy, outTgaFilePath_c_copy);
