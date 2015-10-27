@@ -420,45 +420,249 @@ void idct_don(tga_image *tga, double data[8][8], const int xpos, const int ypos)
         {
             double z = 0.0;
             double *cosDataX = cosData[x];
+            double cosDataX_1 = cosDataX[1];
+            double cosDataX_2 = cosDataX[2];
+            double cosDataX_3 = cosDataX[3];
+            double cosDataX_4 = cosDataX[4];
+            double cosDataX_5 = cosDataX[5];
+            double cosDataX_6 = cosDataX[6];
+            double cosDataX_7 = cosDataX[7];
             
-            for (v=0; v<8; v++)
-            {
-                double /*Cu = 1.0,*/ Cv = 1.0;
-                double cos_2yPlus1_x_PI_DIV_16_x_v = cosDataY[v];
-                double *data_v = data[v];
-                
-                if (v == 0) Cv = 0.70710678118655; else Cv = 1.0;
-                double Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v = Cv * cos_2yPlus1_x_PI_DIV_16_x_v;
+//            for (v=0; v<8; v++)
+//            {
+            
+            //v = 0
+            double *data_v = data[0];
+            z = z
+            +
+            (0.70710678118655 * cosDataY[0])
+            *
+            (   //u = 0
+                (data_v[0] * 0.70710678118655) +
+                //u = 1;
+                (data_v[1] * cosDataX_1) +
+                //u = 2;
+                (data_v[2] * cosDataX_2) +
+                //u = 3;
+                (data_v[3] * cosDataX_3) +
+                //u = 4;
+                (data_v[4] * cosDataX_4) +
+                //u = 5;
+                (data_v[5] * cosDataX_5) +
+                //u = 6;
+                (data_v[6] * cosDataX_6) +
+                //u = 7;
+                (data_v[7] * cosDataX_7)
+             );
+            
+            //v = 1
+            data_v = data[1];
+            z = z
+            +
+            cosDataY[1]
+            *
+            (   //u = 0
+             (data_v[0] * 0.70710678118655) +
+             //u = 1;
+             (data_v[1] * cosDataX_1) +
+             //u = 2;
+             (data_v[2] * cosDataX_2) +
+             //u = 3;
+             (data_v[3] * cosDataX_3) +
+             //u = 4;
+             (data_v[4] * cosDataX_4) +
+             //u = 5;
+             (data_v[5] * cosDataX_5) +
+             //u = 6;
+             (data_v[6] * cosDataX_6) +
+             //u = 7;
+             (data_v[7] * cosDataX_7)
+             );
+            
+            //v = 2
+            data_v = data[2];
+            z = z
+            +
+            cosDataY[2]
+            *
+            (   //u = 0
+             (data_v[0] * 0.70710678118655) +
+             //u = 1;
+             (data_v[1] * cosDataX_1) +
+             //u = 2;
+             (data_v[2] * cosDataX_2) +
+             //u = 3;
+             (data_v[3] * cosDataX_3) +
+             //u = 4;
+             (data_v[4] * cosDataX_4) +
+             //u = 5;
+             (data_v[5] * cosDataX_5) +
+             //u = 6;
+             (data_v[6] * cosDataX_6) +
+             //u = 7;
+             (data_v[7] * cosDataX_7)
+             );
+            
+            //v = 3
+            data_v = data[3];
+            z = z
+            +
+            cosDataY[3]
+            *
+            (   //u = 0
+             (data_v[0] * 0.70710678118655) +
+             //u = 1;
+             (data_v[1] * cosDataX_1) +
+             //u = 2;
+             (data_v[2] * cosDataX_2) +
+             //u = 3;
+             (data_v[3] * cosDataX_3) +
+             //u = 4;
+             (data_v[4] * cosDataX_4) +
+             //u = 5;
+             (data_v[5] * cosDataX_5) +
+             //u = 6;
+             (data_v[6] * cosDataX_6) +
+             //u = 7;
+             (data_v[7] * cosDataX_7)
+             );
+            
+            //v = 4
+            data_v = data[4];
+            z = z
+            +
+            cosDataY[4]
+            *
+            (   //u = 0
+             (data_v[0] * 0.70710678118655) +
+             //u = 1;
+             (data_v[1] * cosDataX_1) +
+             //u = 2;
+             (data_v[2] * cosDataX_2) +
+             //u = 3;
+             (data_v[3] * cosDataX_3) +
+             //u = 4;
+             (data_v[4] * cosDataX_4) +
+             //u = 5;
+             (data_v[5] * cosDataX_5) +
+             //u = 6;
+             (data_v[6] * cosDataX_6) +
+             //u = 7;
+             (data_v[7] * cosDataX_7)
+             );
+            
+            //v = 5
+            data_v = data[5];
+            z = z
+            +
+            cosDataY[5]
+            *
+            (   //u = 0
+             (data_v[0] * 0.70710678118655) +
+             //u = 1;
+             (data_v[1] * cosDataX_1) +
+             //u = 2;
+             (data_v[2] * cosDataX_2) +
+             //u = 3;
+             (data_v[3] * cosDataX_3) +
+             //u = 4;
+             (data_v[4] * cosDataX_4) +
+             //u = 5;
+             (data_v[5] * cosDataX_5) +
+             //u = 6;
+             (data_v[6] * cosDataX_6) +
+             //u = 7;
+             (data_v[7] * cosDataX_7)
+             );
+            
+            //v = 6
+            data_v = data[6];
+            z = z
+            +
+            cosDataY[6]
+            *
+            (   //u = 0
+             (data_v[0] * 0.70710678118655) +
+             //u = 1;
+             (data_v[1] * cosDataX_1) +
+             //u = 2;
+             (data_v[2] * cosDataX_2) +
+             //u = 3;
+             (data_v[3] * cosDataX_3) +
+             //u = 4;
+             (data_v[4] * cosDataX_4) +
+             //u = 5;
+             (data_v[5] * cosDataX_5) +
+             //u = 6;
+             (data_v[6] * cosDataX_6) +
+             //u = 7;
+             (data_v[7] * cosDataX_7)
+             );
+            
+            //v = 7
+            data_v = data[7];
+            z = z
+            +
+            cosDataY[7]
+            *
+            (   //u = 0
+             (data_v[0] * 0.70710678118655) +
+             //u = 1;
+             (data_v[1] * cosDataX_1) +
+             //u = 2;
+             (data_v[2] * cosDataX_2) +
+             //u = 3;
+             (data_v[3] * cosDataX_3) +
+             //u = 4;
+             (data_v[4] * cosDataX_4) +
+             //u = 5;
+             (data_v[5] * cosDataX_5) +
+             //u = 6;
+             (data_v[6] * cosDataX_6) +
+             //u = 7;
+             (data_v[7] * cosDataX_7)
+             );
 
-                z = z
-                +
-                Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v
-                *
-                (   //u = 0
-                    (data_v[0] * 0.70710678118655)
-                    +
-                    //u = 1;
-                    (data_v[1] * cosDataX[1])
-                    +
-                    //u = 2;
-                    (data_v[2] * cosDataX[2])
-                    +
-                    //u = 3;
-                    (data_v[3] * cosDataX[3])
-                    +
-                    //u = 4;
-                    (data_v[4] * cosDataX[4])
-                    +
-                    //u = 5;
-                    (data_v[5] * cosDataX[5])
-                    +
-                    //u = 6;
-                    (data_v[6] * cosDataX[6])
-                    +
-                    //u = 7;
-                    (data_v[7] *cosDataX[7])
-                );
-            } //end for(v...
+//            double /*Cu = 1.0,*/ Cv = 1.0;
+//            double cos_2yPlus1_x_PI_DIV_16_x_v = cosDataY[v];
+//            double *data_v = data[v];
+//            
+//            if (v == 0) Cv = 0.70710678118655; else Cv = 1.0;
+//            double Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v = Cv * cos_2yPlus1_x_PI_DIV_16_x_v;
+//            
+//            z = z
+//            +
+//            Cv_x_cos_2yPlus1_x_PI_DIV_16_x_v
+//            *
+//            (   //u = 0
+//             (data_v[0] * 0.70710678118655)
+//             +
+//             //u = 1;
+//             (data_v[1] * cosDataX[1])
+//             +
+//             //u = 2;
+//             (data_v[2] * cosDataX[2])
+//             +
+//             //u = 3;
+//             (data_v[3] * cosDataX[3])
+//             +
+//             //u = 4;
+//             (data_v[4] * cosDataX[4])
+//             +
+//             //u = 5;
+//             (data_v[5] * cosDataX[5])
+//             +
+//             //u = 6;
+//             (data_v[6] * cosDataX[6])
+//             +
+//             //u = 7;
+//             (data_v[7] *cosDataX[7])
+//             );
+
+            
+            
+            
+//            } //end for(v...
             
             z /= 4.0;
             if (z > 255.0) z = 255.0;
